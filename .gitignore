@@ -1,3 +1,6 @@
 /fare_info.py
 /main.py
 /__pycache__
+
+# for hiding tokens
+.env
