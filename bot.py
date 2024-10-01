@@ -1,11 +1,13 @@
+import os
+from dotenv import load_dotenv
 import requests
 import asyncio
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, ConversationHandler, filters
 
-# Replace these with your actual credentials
-TELEGRAM_BOT_TOKEN = '7295704125:AAG0DqEBJ2_Wl8VNs18SbI5MlYShHCX-X3o'
-RAPID_API_KEY = 'cfbe6a5479msh1a4013ebcd8fcd6p16f59ajsnf1c4d3ef1ed6'
+# Load environment variables from .env file
+load_dotenv()
+
 # Define states for conversation
 FARE_ENQUIRY, SEARCH_STATION, CONTINUE_OR_STOP = range(3)
 
